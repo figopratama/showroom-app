@@ -1,0 +1,56 @@
+{% extends 'core/base.html' %}
+{% load currency %}
+
+{% block title %}
+{{ car.name }}{{ car.model }}
+{% endblock %}
+
+{% block content %}
+    <div class="mt-100 text-center text-4xl">
+        <h1>Car Detail</h1>
+    </div>
+
+    <div class="m-10 grid grid-cols-5 gap-6">
+        <div class="text-2xl text-justify col-span-4">
+            
+            <h1>{{ car.brand }} {{ car.model }}</h1>
+            <h2>{{ car.year }}</h2>
+            <p>{{ car.price|rupiah }}</p>
+        </div>
+
+        <div class="col-span-1 p-6 bg-gray-100 rounded-xl">
+            <h1>Loan & Interest</h1>
+            <h3>Loan: {{ car.loan|rupiah }}</h3>
+            <h3>Interest: {{ car.interest|percent }}</h3>
+
+        </div>
+    </div>
+
+    <div class="mt-6 px-6 py-12 bg-gray-100 rounded-xl">
+        <h2 class="mb-12 text-2xl text-center">Service History</h2>
+        <div class="grid grid-cols-3 gap-3">
+            {% for service in services %}
+            <div>
+                <div class="p-6 bg-white rounded-b-xl">
+                    <h3 class="text-l">{{ service.date }}</h3>
+                    <p class="text-gray-300">{{ service.description }}</p>
+                    <p class="text-gray-500">Service Cost: {{ service.cost|rupiah }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="mt-6 px-6 py-12 bg-gray-100 rounded-xl">
+        <h1 class="mb-12 text-2xl text-center">Harga Pokok Produksi (HPP) of {{ car.model }}</h1>
+        <ul>
+            <li>Car Price: {{ car.price|rupiah }}</li>
+            <li>Loan: {{ car.loan|rupiah }}</li>
+            <li>Interest: {{ car.interest|percent }}</li>
+            <li>Total Service Cost: {{ total_service_cost|rupiah }}</li>
+        </ul>
+        <hr>
+        <h2>Production Cost (HPP): <strong>{{ production_cost|rupiah }}</strong></h2>
+        <br>
+    </div>
+{% endblock %}
