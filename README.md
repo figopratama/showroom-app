@@ -3,8 +3,7 @@
 <p>Assessment for Junior Python Developer in KreasiAi</p>
 
 <h3>1. Form Tambah Mobil</h3>
-Halaman ini menampilkan form pengisian data mobil, seperti Plat Nomor sebagai ID, Merk, Model, Tahun, Harga Dasar, Pinjaman, dan Bunga.
-<br>
+<p>Halaman ini menampilkan form pengisian data mobil, seperti Plat Nomor sebagai ID, Merk, Model, Tahun, Harga Dasar, Pinjaman, dan Bunga.</p>
 
 ![Form Tambah Mobil](https://github.com/figopratama/showroom-app/blob/main/Form-Tambah-Mobil.png?raw=true)
 
