@@ -4,7 +4,7 @@
 
 <h3>1. Form Tambah Mobil</h3>
 Halaman ini menampilkan form pengisian data mobil, seperti Plat Nomor sebagai ID, Merk, Model, Tahun, Harga Dasar, Pinjaman, dan Bunga.
-![Form Tambah Mobil](https://github.com/figopratama/showroom-app/blob/main/Form%20Tambah%20Mobil.png?raw=true)
+![Form Tambah Mobil](https://github.com/figopratama/showroom-app/blob/main/Form%20Tambah%20Mobil.png)
 <h3>2. Dashboard</h3>
 
 <h3>3. Detail Mobil</h3>
