@@ -12,3 +12,5 @@ Halaman ini menampilkan form pengisian data mobil, seperti Plat Nomor sebagai ID
 <h3>4. Form Service Mobil</h3>
 
 <h3>5. Menghitung HPP Mobil</h3>
+
+<h3>6. Tombol Hapus Mobil</h3>
