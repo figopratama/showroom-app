@@ -7,4 +7,6 @@ urlpatterns = [
     path('car-form/', views.newCar, name='car-form'),
     path('service-form/', views.newService, name='service-form'),
     path('<str:pk>/', views.detail, name='detail'),
+    path('<str:pk>/delete/', views.deleteCar, name='delete'),
+
 ]

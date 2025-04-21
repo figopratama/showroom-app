@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.db.models import Sum
+from django.contrib import messages
 
 from .forms import NewCarForm, NewServiceForm
 from .models import Car, Service
@@ -55,4 +56,14 @@ def newService(request):
     return render(request, 'car/service-form.html', {
         'form': form
     })
+
+def deleteCar(request, pk):
+    car = get_object_or_404(Car, pk=pk)
+
+    if request.method == 'POST':
+        car.delete()
+        messages.success(request, 'Car deleted successfully.')
+        return redirect('/')  # Or wherever you want to redirect after deletion
+
+    return render(request, 'car/delete-car.html', {'car': car})
 
